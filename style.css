@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+#tego {
+  float: left;
+  text-align: center;
+  padding: 10px; }
+
+label {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: Open Sans Condensed, sans-serif;
+  font-weight: bold; }
+
+.container1 {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+span.mob-menu-toggle-1,
+span.mob-menu-toggle-1:before,
+span.mob-menu-toggle-1:after {
+  content: "";
+  height: 5px;
+  display: block;
+  width: 100%;
+  background: black;
+  position: relative;
+  transition: all 0.3s ease-in-out; }
+
+span.mob-menu-toggle-1:before {
+  top: -25px; }
+
+span.mob-menu-toggle-1:after {
+  top: 20px; }
+
+.container1:hover span.mob-menu-toggle-1 {
+  background: transparent; }
+.container1:hover span.mob-menu-toggle-1:before,
+.container1:hover span.mob-menu-toggle-1:after {
+  position: absolute;
+  top: 0;
+  transform: rotate(45deg); }
+.container1:hover span.mob-menu-toggle-1:before {
+  transform: rotate(-45deg); }
+
+.container2 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+span.toggle2,
+span.toggle2:before,
+span.toggle2:after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: #000;
+  position: relative; }
+
+span.toggle2:before {
+  top: -25px; }
+
+span.toggle2:after {
+  top: 20px; }
+
+.container2:hover span.toggle2:after {
+  animation-name: test;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+.container2:hover span.toggle2:before {
+  animation-name: test2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+.container2:hover span.toggle2 {
+  background: transparent; }
+
+@keyframes test {
+  0% {
+    position: absolute;
+    top: 0; }
+  100% {
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg); } }
+@keyframes test2 {
+  0% {
+    position: absolute;
+    top: 0; }
+  100% {
+    position: absolute;
+    top: 0;
+    transform: rotate(-45deg); } }
+.container3 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+span.toggle3,
+span.toggle3:before,
+span.toggle3:after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: black;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease-in-out; }
+
+span.toggle3:before {
+  top: -25px; }
+
+span.toggle3:after {
+  top: 20px; }
+
+.container3:hover span.toggle3 {
+  transform: rotate(90deg);
+  width: 50px;
+  top: 0; }
+.container3:hover span.toggle3:before {
+  top: 30px; }
+.container3:hover span.toggle3:after {
+  top: -35px; }
+
+.container4 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .container4 .circle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #000;
+    border-radius: 40px;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.7s ease-in-out; }
+  .container4 .toggle4:before,
+  .container4 .toggle4:after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: #000;
+    display: flex;
+    position: relative; }
+  .container4 .toggle4:before {
+    top: 1.5px;
+    transform: rotate(45deg); }
+  .container4 .toggle4:after {
+    top: -1.5px;
+    transform: rotate(-45deg); }
+
+.container4:hover .circle {
+  transform: rotate(180deg); }
+
+#animated span {
+  margin: 0;
+  padding: 0;
+  line-height: 1px;
+  color: #000; }
+
+#animated {
+  letter-spacing: -13px;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+span.dot1:before,
+span.dot2:before,
+span.dot3:before,
+span.dot4:before {
+  content: "\25CF";
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  left: -5px;
+  z-index: 1; }
+
+span.line1:after,
+span.line2:after,
+span.line3:after {
+  content: "";
+  width: 35px;
+  height: 2px;
+  display: inline-block;
+  background: #000;
+  position: relative;
+  top: -2px; }
+
+#animated:hover span.dot1:before,
+#animated:hover span.dot3:before {
+  animation: jazda 0.5s infinite; }
+#animated:hover span.dot2:before,
+#animated:hover span.dot4:before {
+  animation: jazda2 0.5s infinite; }
+#animated:hover span.line1:after,
+#animated:hover span.line3:after {
+  animation: line 0.5s infinite; }
+#animated:hover span.line2:after {
+  animation: line2 0.5s infinite; }
+
+@keyframes jazda {
+  0%,
+  100% {
+    top: -5px; }
+  50% {
+    top: 5px; } }
+@keyframes jazda2 {
+  0%,
+  100% {
+    top: 5px; }
+  50% {
+    top: -5px; } }
+@keyframes line {
+  0%,
+  100% {
+    transform: rotate(17.5deg); }
+  50% {
+    transform: rotate(-17.5deg); } }
+@keyframes line2 {
+  0%,
+  100% {
+    transform: rotate(-17.5deg); }
+  50% {
+    transform: rotate(17.5deg); } }
+#animated6 {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.adot6hr {
+  height: 3px;
+  width: 100px;
+  display: none;
+  position: absolute;
+  background: #0971B2;
+  z-index: -1; }
+
+#dot {
+  background: #000;
+  margin: 1px;
+  border-radius: 50%; }
+
+.adot1 {
+  height: 13px;
+  width: 13px; }
+
+.adot2 {
+  height: 11px;
+  width: 11px; }
+
+.adot3 {
+  height: 9px;
+  width: 9px; }
+
+.adot4 {
+  height: 7px;
+  width: 7px; }
+
+.adot5 {
+  height: 5px;
+  width: 5px; }
+
+.adot6 {
+  height: 3px;
+  width: 3px; }
+
+#animated6:hover .adot1 {
+  animation: plemnik 0.8s linear 0.1s infinite;
+  animation-direction: rewerse;
+  height: 13px;
+  width: 13px; }
+#animated6:hover .adot2 {
+  animation: plemnik 0.8s linear 0.2s infinite;
+  animation-direction: rewerse;
+  height: 11px;
+  width: 11px; }
+#animated6:hover .adot3 {
+  animation: plemnik 0.8s linear 0.3s infinite;
+  animation-direction: rewerse;
+  height: 9px;
+  width: 9px; }
+#animated6:hover .adot4 {
+  animation: plemnik 0.8s linear 0.4s infinite;
+  animation-direction: rewerse;
+  height: 7px;
+  width: 7px; }
+#animated6:hover .adot5 {
+  animation: plemnik 0.8s linear 0.5s infinite;
+  animation-direction: rewerse;
+  height: 5px;
+  width: 5px; }
+#animated6:hover .adot6 {
+  animation: plemnik 0.8s linear 0.6s infinite;
+  animation-direction: rewerse;
+  height: 3px;
+  width: 3px; }
+
+@keyframes plemnik {
+  0% {
+    position: relative;
+    top: 0;
+    z-index: 10; }
+  40% {
+    position: relative;
+    top: 15px; }
+  80% {
+    position: relative;
+    top: -15px;
+    z-index: -10; }
+  100% {
+    position: relative;
+    top: 0px; } }
+
+/*# sourceMappingURL=style.css.map */
